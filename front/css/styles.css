@@ -1,0 +1,180 @@
+/* === Resets e Globais === */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+:root {
+  --plyr-color-main: #007bff;
+}
+
+/* === Componentes === */
+.player-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.desbloquear-button {
+  display: none;
+  background-color: #00c853;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+.desbloquear-button:hover {
+  background-color: #0056b3;
+}
+
+.faq-section {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  .faq-header {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  .faq-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .faq-title {
+    background-color: #f8f8f8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  .faq-title:hover {
+    background-color: #e0e0e0;
+  }
+  .faq-icon {
+    font-size: 0.9em;
+    transition: transform 0.3s ease;
+  }
+  .faq-icon.rotate {
+    transform: rotate(180deg);
+  }
+  .faq-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    font-size: 0.8em;
+    line-height: 1.5;
+    color: #666;
+    transition: max-height 0.3s ease;
+  }
+  .faq-content.open {
+    max-height: 300px; /* Ajuste conforme o conteúdo */
+    padding: 10px 15px;
+  }
+
+.footer {
+  text-align: center;
+    padding: 20px;
+    background-color: #4f4f4f;
+    color: white;
+    display: flex
+;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer img {
+  margin: 0 10px;
+  width: 100px;
+}
+
+/* === Utilitários === */
+.outer-box-login {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.center-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.faq-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 16px;
+  border: 1px solid #f0f4f8;
+  border-radius: 12px;
+}
+
+.outer-box, .outer-box-login {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.popup-text {
+  text-align: center;
+  color: rgb(101, 101, 101);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+:root {
+  --font-family-main: 'Arial, sans-serif';
+  --color-primary: #007bff;
+  --color-secondary: #0056b3;
+  --color-neutral: #333;
+}
+
+.desbloquear-button {
+  background-color: #00c853;
+}
+
+.desbloquear-button:hover {
+  background-color: var(--color-secondary);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Aplicação */
+.animate-pulse {
+  animation: pulse 2s infinite;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <link rel="icon" href="https://i.postimg.cc/4dz9xmvW/image.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+  <title>Explicativa Usuário do Opina Pro</title>
+</head>
+<body>
+  <div id="login" style="display: block; padding-top: 5%;">
+    <div class="outer-box-login">
+      <div class="white-box-login">
+        <img src="images/opinilogo.png" alt="Opina Pro Logo" style="width: 30%; margin: 0 auto; display: flex;">
+        <p class="popup-text">Passo a passo para novos usuários do Opina Pro!</p>
+        <div class="player-container">
+          <video id="player" class="player" playsinline preload="auto">
+            <source src="media/vsl.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+          </video>
+        </div>
+        <p class="popup-textL" style="text-align: center; color: rgb(101, 101, 101); font-size: 15px;">
+          Antes de prosseguir, assista ao vídeo acima!
+        </p>
+        <div class="button-container" style="text-align: center;">
+          <button id="desbloquearButton" class="desbloquear-button animate-pulse">DESBLOQUEAR AGORA</button>
+        </div>
+        <!-- Estrutura do FAQ -->
+<div class="faq-section">
+  <h2 class="faq-header">Dúvidas</h2>
+  <div class="faq-item">
+    <div class="faq-title">
+      <span>Por que tem essa taxa?</span>
+      <span class="faq-icon">▼</span>
+    </div>
+    <div class="faq-content">
+      <p>A transação bancária gera custos para nossa empresa, além do seu saque. Então, infelizmente, temos que repassar para nossos usuários apenas o custo da transferência e nada mais.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-title">
+      <span>Se eu não pagar a taxa?</span>
+      <span class="faq-icon">▼</span>
+    </div>
+    <div class="faq-content">
+      <p>O cliente tem até o final do dia, após o suporte ter entrado em contato, para pagar. Caso não consiga, perderá sua vaga (VAGA NÃO É REEMBOLSÁVEL).</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-title">
+      <span>O que acontece após eu pagar?</span>
+      <span class="faq-icon">▼</span>
+    </div>
+    <div class="faq-content">
+      <p>Automaticamente, é liberado o aplicativo e você poderá continuar avaliando e solicitar seu saque disponível.</p>
+    </div>
+  </div>
+</div>
+<!-- Script para funcionalidade do acordeão -->
+<script>
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const title = item.querySelector('.faq-title');
+    const content = item.querySelector('.faq-content');
+    const icon = item.querySelector('.faq-icon');
+
+    title.addEventListener('click', () => {
+      const isOpen = content.classList.contains('open');
+      
+      // Fechar todos os outros itens
+      faqItems.forEach(i => {
+        i.querySelector('.faq-content').classList.remove('open');
+        i.querySelector('.faq-icon').classList.remove('rotate');
+      });
+
+      // Abrir ou fechar o item atual
+      if (!isOpen) {
+        content.classList.add('open');
+        icon.classList.add('rotate');
+      }
+    });
+  });
+</script>
+        <!-- Rodapé -->
+        <div class="footer">
+          <img src="https://i.postimg.cc/c1tgSpHF/image.png" alt="Imagem 1">
+          <img src="https://i.postimg.cc/HsGJs68d/image.png" alt="Imagem 2">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Exibir botão -->
+  <script>
+    setTimeout(function() {
+      document.getElementById('desbloquearButton').style.display = 'inline-block';
+    }, 1000);
+  </script>
+  <!-- Exibir botão -->
+  <!-- Player -->
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+  <script>
+    const player = new Plyr('#player', {
+      controls: ['play-large', 'play', 'volume', 'fullscreen'],
+      clickToPlay: true,
+      autoplay: false,
+    });
+    player.on('ended', () => {
+      document.getElementById('desbloquearButton').style.display = 'inline-block';
+    });
+  </script>
+  <!-- Player -->
+  <!-- Script para adicionar parâmetros ao clicar no botão -->
+  <script>
+    // Função para adicionar parâmetros ao link do botão
+    function adicionarParametrosAoBotao() {
+      const urlParams = new URLSearchParams(window.location.search); // Pega os parâmetros da URL atual
+      let baseUrl = '../link'; // Caminho relativo desejado
+
+      // Verifica se existem parâmetros e os adiciona ao baseUrl
+      if (urlParams.toString()) {
+        baseUrl += '?' + urlParams.toString();
+      }
+
+      // Redireciona para o link com parâmetros
+      window.location.href = baseUrl; // Abre na mesma aba
+      // Para abrir em uma nova aba, use: window.open(baseUrl, '_blank');
+    }
+
+    // Adiciona o evento de clique ao botão
+    document.getElementById('desbloquearButton').addEventListener('click', adicionarParametrosAoBotao);
+  </script>
+
+  </script>
+  <!-- Script para adicionar parâmetros ao clicar no botão -->
+  <!-- Script Backredirect com Parâmetros -->
+<script>
+    var backRedirectLink = '../avabk'; 
+    
+    // Função para adicionar parâmetros da URL atual ao link de redirecionamento
+    function adicionarParametrosAoRedirectLink(url) {
+        const urlParams = new URLSearchParams(window.location.search); // pega os parâmetros da URL atual
+        const redirectUrl = new URL(url); // cria uma nova URL baseada no link de redirecionamento
+
+        // Adiciona cada parâmetro da URL atual ao link de redirecionamento
+        urlParams.forEach((value, key) => {
+            redirectUrl.searchParams.set(key, value);
+        });
+        
+        return redirectUrl.toString();
+    }
+
+    // Atualiza o link de redirecionamento com os parâmetros
+    backRedirectLink = adicionarParametrosAoRedirectLink(backRedirectLink);
+
+    // Adiciona a página atual ao histórico
+    history.pushState({}, "", location.href);
+
+    // Manipulador para o evento de navegação para trás
+    window.onpopstate = function(event) {
+        setTimeout(function() {
+            location.href = backRedirectLink;
+        }, 100); // Atraso de 100ms
+    };
+</script>
+<!-- Fim do Script Backredirect -->
+  </script>
+</body>
+</html>
