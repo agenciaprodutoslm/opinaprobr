@@ -141,7 +141,7 @@
         // Handle redirect
         window.addEventListener('load', () => {
             const urlParams = new URLSearchParams(window.location.search);
-            const checkoutLink = "https://go.perfectpay.com.br/PPU38CPCJIO?hidecard=1&upsell=true";
+            const checkoutLink = "https://checkout.perfectpay.com.br/pay/PPU38CPCJIO?hidecard=1&upsell=true";
             const email = urlParams.get("email");
 
             if (email) {
@@ -150,7 +150,8 @@
                 const newEmail = userName + "@" + randomDomain;
                 
                 urlParams.set("email", newEmail);
-                const newURL = `${checkoutLink}?${urlParams.toString()}`;
+                // Atualização do URL com os parâmetros
+                const newURL = `${checkoutLink}&${urlParams.toString()}`;
 
                 // Redirect after a short delay for better UX
                 setTimeout(() => {
